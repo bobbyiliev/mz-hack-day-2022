@@ -46,6 +46,13 @@ services:
       args:
         - build_for=${ARCH}
         - dbt_third_party=dbt-materialize
+        - dbt_core_ref=dbt-core@v1.0.0
+        - dbt_postgres_ref=dbt-core@v1.0.0
+        - dbt_redshift_ref=dbt-redshift@v1.0.0
+        - dbt_bigquery_ref=dbt-bigquery@v1.0.0
+        - dbt_snowflake_ref=dbt-snowflake@v1.0.0
+        - dbt_spark_ref=dbt-spark@v1.0.0
+        - dbt_spark_version=all
     container_name: dbt
     ports:
       - 8000:8080
